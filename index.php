@@ -34,7 +34,7 @@ use Factuur\Methods\Methods;
  */
 
 $methods = new Methods();
-$methods->setToken('$2y$10$/Sk/XPF0xFcZL6Obxg9POeUcsAY9IdwBC');
+$methods->setToken(); //your account token
 echo "<pre>";
-print_r($methods->updateProduct('pr_2AZEaK2goW', ['product_name' => 'updated']));
+print_r($methods->getProduct()); //your product id
 echo "</pre>";
