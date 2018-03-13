@@ -1,0 +1,22 @@
+{
+    "name": "aregboyakhchyan/factuur_client",
+    "description": "Client for Factuur.be api",
+    "keywords": ["factuur.be", "factuur", "factuur api"],
+    "type": "package",
+    "require": {
+        "guzzlehttp/guzzle": "6.0.*"
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "Areg Boyakhchyan",
+        "email": "boyakhchyanareg@gmail.com"
+    }],
+    "autoload": {
+        "files": ["src/functions_include.php"],
+        "psr-4": {
+            "Factuur\\" : ["src/"]
+        }
+    },
+    "version": "1.0.0",
+    "minimum-stability": "dev"
+}
