@@ -2,7 +2,7 @@
 
 include "vendor/autoload.php";
 
-use Factuur\Methods\Methods;
+use Factuur\FactuurAPI\FactuurAPI;
 
 /**
  *        Methods
@@ -33,8 +33,8 @@ use Factuur\Methods\Methods;
  *    remindInvoice($id, $data)
  */
 
-$methods = new Methods();
-$methods->setToken(); //your account token
+$api = new FactuurAPI();
+$api->setToken('$2y$10$/Sk/XPF0xFcZL6Obxg9POeUcsAY9IdwBC'); //your account token
 echo "<pre>";
-print_r($methods->getProduct()); //your product id
+print_r($api->getProduct('pr_2AZEaK2goW')); //your product id
 echo "</pre>";

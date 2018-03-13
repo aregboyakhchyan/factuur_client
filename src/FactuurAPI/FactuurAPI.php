@@ -1,11 +1,11 @@
 <?php
 
-namespace Factuur\Methods;
+namespace Factuur\FactuurAPI;
 use GuzzleHttp\Exception\RequestException;
 use Factuur\Base;
 
 
-class Methods extends Base
+class FactuurAPI extends Base
 {
 
     /* -----Products----- */
