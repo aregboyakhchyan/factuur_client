@@ -33,8 +33,9 @@ use Factuur\FactuurAPI\FactuurAPI;
  *    remindInvoice($id, $data)
  */
 
+
 $api = new FactuurAPI();
-$api->setToken(); //your account token
+$api->setToken(''); //your account token
 echo "<pre>";
-print_r($api->getProducts()); //your product id
+print_r($api->getProduct('')); //your product id
 echo "</pre>";

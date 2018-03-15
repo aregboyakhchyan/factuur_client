@@ -379,7 +379,7 @@ class FactuurAPI extends Base
      *   Params - category id (required)
      *            amount (optional)
      *            date (optional) */
-    public function payInvoice($id, $data)
+    public function payInvoice($id, $data = [])
     {
         try{
             $url = "/invoices/".$id.'/payments';
@@ -398,7 +398,7 @@ class FactuurAPI extends Base
      *            subject (optional)
      *            message (optional)
      *            email (optional) */
-    public function remindInvoice($id, $data)
+    public function remindInvoice($id, $data = [])
     {
         try{
             $url = "/invoices/".$id.'/reminders';
