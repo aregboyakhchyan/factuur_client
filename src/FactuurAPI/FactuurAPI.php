@@ -31,8 +31,9 @@ class FactuurAPI extends Base
     public function getProducts($offset = 0, $count = 10)
     {
         try{
-            $url = "/products?offset=".$offset.'&count='.$count;
-            $response = $this->callFactuurApi("get", $url);
+            $url = "/products";
+            $data = ['offset' => $offset, 'count' => $count];
+            $response = $this->callFactuurApi("get", $url, $data);
             return $response;
         } catch (RequestException $e) {
             $response = $this->StatusCodeHandling($e);
@@ -124,8 +125,9 @@ class FactuurAPI extends Base
     public function getClients($offset = 0, $count = 10)
     {
         try{
-            $url = "/clients?offset=".$offset.'&count='.$count;
-            $response = $this->callFactuurApi("get", $url);
+            $url = "/clients";
+            $data = ['offset' => $offset, 'count' => $count];
+            $response = $this->callFactuurApi("get", $url, $data);
             return $response;
         } catch (RequestException $e) {
             $response = $this->StatusCodeHandling($e);
@@ -238,8 +240,9 @@ class FactuurAPI extends Base
     public function getCategories($offset = 0, $count = 10)
     {
         try{
-            $url = "/categories?offset=".$offset.'&count='.$count;
-            $response = $this->callFactuurApi("get", $url);
+            $url = "/categories";
+            $data = ['offset' => $offset, 'count' => $count];
+            $response = $this->callFactuurApi("get", $url, $data);
             return $response;
         } catch (RequestException $e) {
             $response = $this->StatusCodeHandling($e);
@@ -317,8 +320,9 @@ class FactuurAPI extends Base
     public function getInvoices($offset = 0, $count = 10)
     {
         try{
-            $url = "/invoices?offset=".$offset.'&count='.$count;
-            $response = $this->callFactuurApi("get", $url);
+            $url = "/invoices";
+            $data = ['offset' => $offset, 'count' => $count];
+            $response = $this->callFactuurApi("get", $url, $data);
             return $response;
         } catch (RequestException $e) {
             $response = $this->StatusCodeHandling($e);

@@ -36,5 +36,5 @@ use Factuur\FactuurAPI\FactuurAPI;
 $api = new FactuurAPI();
 $api->setToken(); //your account token
 echo "<pre>";
-print_r($api->getProduct()); //your product id
+print_r($api->getProducts()); //your product id
 echo "</pre>";
