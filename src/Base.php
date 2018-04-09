@@ -11,7 +11,7 @@ use GuzzleHttp\Psr7\Request;
 class Base
 {
 
-    const API_URL = "https://www.invoicetest.be/api/v1";
+    const API_URL = "https://app.invoicetest.be/api/v1";
 
     protected $client;
     protected $token;
