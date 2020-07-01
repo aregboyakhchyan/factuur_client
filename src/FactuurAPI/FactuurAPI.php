@@ -217,6 +217,20 @@ class FactuurAPI extends Base
         }
     }
 
+    /** Search client by VAT number
+     *   Method - GET
+     *   Params - VAT (required) */
+    public function getClientByVat($vat){
+        try{
+            $url = "/clients/search/".$vat;
+            $response = $this->callFactuurApi("get", $url);
+            return $response;
+        } catch (RequestException $e) {
+            $response = $this->StatusCodeHandling($e);
+            return $response;
+        }
+    }
+
     /* -----Categories----- */
 
     /** Get single category
